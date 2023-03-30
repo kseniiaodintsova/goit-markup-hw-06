@@ -71,7 +71,7 @@
       <section class="strategy">
         <div class="conteiner">
           <!-- hidden comment -->
-          <h2 hidden>What are we doing</h2>
+          <h2 class="visually-hidden">What are we doing</h2>
           <ul class="strategy-list list">
             <li class="strategy-item">
               <div class="strategy-box">
@@ -413,33 +413,51 @@
           <ul class="social-list list">
             <li class="social-item">
               <a href="#" class="social-link">
-                <svg class="social-item-icon" width="24" height="24">
+                <svg width="24" height="24">
                   <use href="./images/icons/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="#" class="social-link">
-                <svg class="social-item-icon" width="24" height="24">
+                <svg width="24" height="24">
                   <use href="./images/icons/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="#" class="social-link">
-                <svg class="social-item-icon" width="24" height="24">
+                <svg width="24" height="24">
                   <use href="./images/icons/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-item">
               <a href="#" class="social-link">
-                <svg class="social-item-icon" width="24" height="24">
+                <svg width="24" height="24">
                   <use href="./images/icons/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-form-wrap">
+          <h4 class="title-h4">Subscribe</h4>
+          <form class="footer-contact-form">
+            <input
+              type="text"
+              name="user_email"
+              class="email-input"
+              placeholder="E-mail"
+              required
+            />
+            <button class="contact-form-btn" type="submit">
+              Subscribe
+              <svg class="btn-icon" width="24" height="24">
+                <use href="./images/icons/sprite.svg#subscribe"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -450,6 +468,70 @@
             <use href="./images/icons/sprite.svg#close-modal"></use>
           </svg>
         </button>
+        <p class="title-h4">Leave your contacts and we will call you back</p>
+        <form>
+          <label
+            ><span class="text-label">Name</span>
+            <span class="modal-form-wrap">
+              <input
+                type="text"
+                class="modal-input"
+                name="user_name"
+                required
+              />
+              <svg class="modal-input-icon" width="18" height="24">
+                <use href="./images/icons/sprite.svg#person"></use>
+              </svg>
+            </span>
+          </label>
+          <label
+            ><span class="text-label">Phone</span>
+            <span class="modal-form-wrap">
+              <input
+                type="tel"
+                class="modal-input"
+                name="user_phone"
+                required
+              />
+              <svg class="modal-input-icon" width="18" height="24">
+                <use href="./images/icons/sprite.svg#phone"></use>
+              </svg>
+            </span>
+          </label>
+          <label
+            ><span class="text-label">Email</span>
+            <span class="modal-form-wrap">
+              <input
+                type="email"
+                class="modal-input"
+                name="user_email"
+                required
+              />
+              <svg class="modal-input-icon" width="18" height="24">
+                <use href="./images/icons/sprite.svg#email"></use>
+              </svg>
+            </span>
+          </label>
+          <label
+            ><span class="text-label">Comment</span>
+            <textarea
+              name="user_message"
+              placeholder="Text input"
+              class="modal-form-message"
+            ></textarea>
+          </label>
+          <input
+            id="user-policy"
+            type="checkbox"
+            name="user_policy"
+            class="modal-form-check visually-hidden"
+          />
+          <label for="user-policy" class="modal-form-check-desk"
+            >I accept the terms and conditions of the&nbsp;
+            <a href="">Privacy Policy</a></label
+          >
+          <button type="submit" class="modal-btn">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

@@ -106,6 +106,15 @@ body {
 .strategy-item > .subtitle {
   margin-bottom: 8px;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
 
 /* ========== /COMPONENTS ========== */
 /* ========== NAVIGATION ========== */
@@ -236,8 +245,7 @@ body {
   display: flex;
   gap: 24px;
 }
-.strategy-icon {
-}
+
 .strategy-box {
   display: flex;
   justify-content: center;
@@ -374,11 +382,63 @@ body {
 
 .footer-social-wrap {
   transition: background-color var(--duration);
+  margin-right: 80px;
 }
 
 .footer-social-wrap .social-link:hover,
 .footer-social-wrap .social-link:focus {
   background-color: #31d0aa;
+}
+
+.email-input {
+  min-width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-right: 24px;
+}
+.email-input:focus {
+  border-color: var(--brand-color);
+  outline: none;
+}
+.email-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+.contact-form-btn {
+  transition: background-color var(--duration);
+  display: flex;
+  gap: 16px;
+  min-width: 165px;
+  height: 40px;
+  background-color: var(--brand-color);
+  border: 0;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+.contact-form-btn:hover,
+.contact-form-btn:focus {
+  background-color: var(--focus-color);
+}
+.footer-contact-form {
+  display: flex;
+  align-items: center;
 }
 
 /* ========== /Footer ========== */
@@ -502,7 +562,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 576px;
+  height: 584px;
+  padding: 72px 24px 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -535,5 +596,100 @@ body {
 .madal-close-btn:hover .modal-close-btn-icon,
 .madal-close-btn:focus .modal-close-btn-icon {
   fill: var(--white);
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding-left: 38px;
+  transition: border-color var(--duration);
+}
+.modal-input:focus {
+  outline: none;
+  border-color: var(--brand-color);
+}
+
+.modal .title-h4 {
+  color: var(--title-text);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  transition: border-color var(--duration);
+}
+.modal-form-message:focus {
+  border-color: var(--brand-color);
+  outline: none;
+}
+
+.modal-form-message::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.text-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #8e8f99;
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill var(--duration);
+}
+
+.modal-form-wrap {
+  display: block;
+  position: relative;
+  margin-bottom: 8px;
+}
+.modal-input:focus + .modal-input-icon {
+  fill: var(--brand-color);
+}
+
+.modal-form-check-desk {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.modal-form-check-desk::before {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  content: '';
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.modal-form-check:checked + .modal-form-check-desk::before {
+  background-color: var(--focus-color);
+  border-color: var(--focus-color);
+  background-image: url(../images/modal/property-click.svg);
+  background-position: center;
 }
 /* ---------------------/MODAL WINDOW */

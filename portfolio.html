@@ -60,7 +60,7 @@
       <section class="examples">
         <div class="conteiner">
           <!-- Hidden comment -->
-          <h1 hidden>Work examples</h1>
+          <h1 class="visually-hidden">Work examples</h1>
           <!-- Filter BTN -->
           <ul class="filter-list list">
             <li class="filter-item">
@@ -330,6 +330,24 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-form-wrap">
+          <h4 class="title-h4">Subscribe</h4>
+          <form class="footer-contact-form">
+            <input
+              type="text"
+              name="user_email"
+              class="email-input"
+              placeholder="E-mail"
+              required
+            />
+            <button class="contact-form-btn" type="submit">
+              Subscribe
+              <svg class="btn-icon" width="24" height="24">
+                <use href="./images/icons/sprite.svg#subscribe"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
